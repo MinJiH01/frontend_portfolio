@@ -41,9 +41,9 @@ function AboutMe() {
   ];
 
   const certifications = [
-    {title: "정보처리기능사",
+    {
       year: "2019",
-      
+      title: "정보처리기능사",
       details: ["한국산업인력공단"],
       icon: <FaCertificate color="#646cff" />,
     },
@@ -114,7 +114,7 @@ function AboutMe() {
       <div className="about-container">
         {/* Hero */}
         <div className="hero">
-          <img src="/profile.jpg" alt="Profile" className="profile-img" />
+          <img src="./profile.jpg" alt="Profile" className="profile-img" />
           <div className="hero-text">
             <h1>한민지</h1>
             <p className="role">Frontend Developer</p>
