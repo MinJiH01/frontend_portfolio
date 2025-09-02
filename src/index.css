@@ -1,0 +1,458 @@
+/* 전체 레이아웃 */
+#root {
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: #333;
+  background: #f9f9fb;
+}
+
+/* 공통 링크 스타일 */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #646cff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+/* PC 창모드 (768px 이하일 때 모바일 대응) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .navbar-logo {
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    width: 100%;
+  }
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #646cff;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end; 
+  width: auto; 
+}
+
+.navbar-links a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #444;
+}
+.navbar-links a:hover {
+  color: #646cff;
+}
+
+/* 프로젝트 카드 행 */
+.project-row {
+  display: flex;
+  flex-direction: row;   
+  gap: 1.5rem;
+  flex-wrap: wrap;    
+  overflow-x: hidden;     
+  padding-bottom: 1rem; 
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 카드 */
+.card {
+  flex: 0 0 auto;             
+  max-width: 100%;
+  height: 300px;
+  width: 280px;
+  min-height: 320px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 카드 이미지 */
+.card img {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+/* 카드 본문 */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 카드 제목 */
+.card-body h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 카드 설명 */
+.card-body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 버튼 */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #646cff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #4c52cc;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 2rem; 
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #646cff;
+}
+
+.role {
+  font-weight: 600;
+  color: #646cff;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Skills */
+.skills {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+.skills h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill-bar {
+  margin-bottom: 1.2rem;
+}
+
+.skill-bar span {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.bar {
+  background: #eaeaea;
+  border-radius: 8px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  background: linear-gradient(90deg, #646cff, #4c52cc);
+  height: 100%;
+  border-radius: 8px;
+  text-align: right;
+  padding-right: 0.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: width 1s ease-in-out;
+}
+
+.percent {
+  position: relative;
+  top: -2px;
+}
+
+/*다운로드 버튼*/
+.download-links button {
+  padding: 0.8rem 1.5rem;
+  background: #646cff;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.download-links button:hover {
+  background: #4c52cc;
+}
+
+/*프로젝트 타이틀*/
+.projects-title {
+  font-weight: 700;
+  color: #646cff;
+  font-size: 1.5rem;          
+  text-align: center;
+  margin: 0 auto 2rem auto;   
+  display: block;              
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid #646cff;
+  width: fit-content;        
+}
+
+/*연락처 타이틀*/
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-weight: 700;
+  color: #646cff;
+  font-size: 1.5rem;          
+  text-align: center;
+  margin: 0 auto 2rem auto;   
+  display: block;              
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid #646cff;
+  width: fit-content;          
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem 2rem;
+  min-width: 200px;
+  flex: 1;
+  max-width: 250px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.contact-card p a {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-card p a:hover {
+  color: #646cff;
+}
+
+
+/* 섹션 제목 */
+
+.section {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #646cff;
+}
+
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.section-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.section-content {
+  flex: 1;
+}
+
+.section-header {
+  font-weight: 600;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.section-detail {
+  margin: 0.2rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 12px; /* 스크롤바 너비 */
+  height: 12px; /* 가로 스크롤바 높이 */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* 스크롤바 트랙 색상 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #646cff; /* 스크롤바 막대 색상 */
+  border-radius: 10px;
+  border: 3px solid #f0f0f0; /* 트랙과 구분을 위한 테두리 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4c52cc; /* 마우스 오버 시 색상 */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;      /* 가운데 정렬 */
+    text-align: center;       /* 텍스트 중앙 정렬 */
+    gap: 1.5rem;              /* 간격 조금 줄임 */
+    margin-bottom: 2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;          /* 가로 폭 꽉 채우기 */
+    width: 100%;
+  }
+
+  .profile-img {
+    width: 150px;             /* 이미지 크기 축소 */
+    height: 190px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border: 3px solid #646cff;
+  }
+
+  .role {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
