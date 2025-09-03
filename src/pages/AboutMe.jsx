@@ -60,7 +60,6 @@ function AboutMe() {
     { name: "JavaScript", level: 75 },
     { name: "CSS", level: 80 },
     { name: "React", level: 70 },
-    { name: "Node.Js", level: 65 },
   ];
 
   // Intersection Observer 적용해서 스킬바가 보일 때 애니메이션 시작

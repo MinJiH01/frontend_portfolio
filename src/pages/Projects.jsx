@@ -6,14 +6,14 @@ const projects = [
     {
         id: "Shopping Mall",
         title: "Shopping Mall",
-        description: "",
-        thumbnail: "",
+        description: "HTML을 활용한 쇼핑몰 사이트",
+        thumbnail: "./Ms_Farm.png",
     },
     {
         id: "Blog",
         title: "Blog",
         description: "React + Markdown을 사용한 블로그 사이트",
-        thumbnail: "",
+        thumbnail: "./My_Blog.png",
     },
 ];
 

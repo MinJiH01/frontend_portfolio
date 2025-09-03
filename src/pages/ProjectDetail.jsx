@@ -5,21 +5,21 @@ const projectDetails = {
     "Shopping Mall": {
         title: "Shopping Mall",
         description: "React + TMDB API를 활용한 영화 검색 사이트입니다.",
-        techStack: ["React", "HTML", "CSS", "JS" ],
+        techStack: ["HTML", "CSS", "JS" ],
         features: [
             "반응형 UI",
-            "",
-            "",
-            "",
+            "로그인",
+            "회원가입",
+            "상품 검색",
         ],
-        demoUrl: "Shopping Mall",
+        demoUrl: "https://minjih01.github.io/Ms_Farm/",
     },
     "Blog": {
         title: "Blog",
         description: "React + Markdown을 사용한 블로그 사이트입니다.",
         techStack: ["React", "Markdown", "Vite"],
         features: ["반응형 UI", "글쓰기/수정/삭제", "즐겨찾기", "라이트/다크 모드"],
-        demoUrl: "Blog"
+        demoUrl: " https://minjih01.github.io/My_Blog/"
     },
 };
 
